@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glass {
+  background: rgba(17,24,39,.55);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.glow {
+  box-shadow: 0 0 60px rgba(16,185,129,.18);
+}
+
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+section {
+  width: 100%;
+}
+
+.full-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .full-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .full-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f7fafc;
+  --surface: rgba(255,255,255,.8);
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #64748b;
+  --border: rgba(0,0,0,.08);
+}
+
+.dark {
+  --bg: #050816;
+  --surface: rgba(17,24,39,.55);
+  --card: #111827;
+  --text: #ffffff;
+  --muted: #94a3b8;
+  --border: rgba(255,255,255,.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: .3s ease;
+}
+
+.glass {
+  background: var(--surface);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+}
+
+:root {
+  --background: #f5f7fb;
+  --surface: #ffffff;
+  --surface-secondary: #eef2f7;
+  --text-primary: #111827;
+  --text-secondary: #64748b;
+
+  --border: #dbe4ee;
+
+  --primary: #0ea5e9;
+  --secondary: #7c3aed;
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+.dark {
+  --background: #040712;
+  --surface: #111827;
+  --surface-secondary: #1f2937;
+
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+
+  --border: rgba(255,255,255,.08);
+
+  --primary: #14b8a6;
+  --secondary: #8b5cf6;
+
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #fb7185;
+}
+
+/* ===========================================================
+   CyberAware Authentication Inputs
+=========================================================== */
+
+.input-auth {
+  @apply w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-4 text-white placeholder:text-slate-500 outline-none transition;
+}
+
+.input-auth:focus {
+  @apply border-emerald-400 ring-2 ring-emerald-500/30;
+}

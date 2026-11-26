@@ -1,0 +1,10 @@
+{
+  "identity": ["users", "organizations", "departments", "roles"],
+  "learning": ["courses", "modules", "module_progress"],
+  "quizzes": ["quizzes", "quiz_questions", "quiz_attempts", "quiz_results"],
+  "phishing": ["phishing_campaigns", "phishing_email_templates", "phishing_events", "phishing_scores"],
+  "labs": ["password_lab_results", "social_engineering_results"],
+  "governance": ["policies", "policy_acknowledgements", "incident_reports"],
+  "recognition": ["certificates", "badges", "leaderboard"],
+  "operations": ["notifications", "activity_logs", "audit_logs", "translations_cache", "settings"]
+}

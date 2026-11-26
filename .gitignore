@@ -1,0 +1,34 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+
+# Generated files
+uploads/*
+!uploads/.gitkeep
+backend/app/uploads/*
+!backend/app/uploads/.gitkeep
+backend/logs/*
+!backend/logs/.gitkeep
+/mongodb-data/
+/mongodb-runtime/
+/mongodb.zip
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
